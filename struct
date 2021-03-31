@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<string.h>
+
+struct student
+{
+	char subject1[15];
+	char subject2[15];
+	char subject3[15];
+	short cj1;
+	short cj2;
+	short cj3;
+};
+int main()
+{
+	struct student s1 = { "英语","数学","政治",66,77,88 };
+	struct student* p1 = &s1;
+
+	//printf("%s:", s1.subject1);
+	printf("%s:", p1->subject1);
+	printf("%d\n", p1->cj1);
+	printf("%s:", p1->subject2);
+	printf("%d\n", p1->cj2);
+	printf("%s:", p1->subject3);
+	printf("%d\n", p1->cj3);
+	return 0;
+}
